@@ -24,6 +24,7 @@ function playerTurn (){
 
 
 
+
 //this code for turn between player X and player 0
  
 for( let i=1; i<=9; i++){
