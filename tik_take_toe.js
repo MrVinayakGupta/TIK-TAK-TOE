@@ -1,7 +1,7 @@
-let num=Math.random()*9;
-num=Math.floor(num+1);
-console.log(num);
-let correntPlayer = null ;
+// let num=Math.random()*9;
+// num=Math.floor(num+1);
+// console.log(num);
+let currentPlayer = 0;
 // Changing tern between player X and player 0
 function playerX() {
     let button = document.getElementById(num);
@@ -18,10 +18,12 @@ function player0(){
     return currentPlayer;
 }
 function playerTurn (){
-
+    if (currentPlayer === "X") {
+        player0();
+    } else {
+        playerX();
+    }
 }
-
-
 
 
 
@@ -30,16 +32,9 @@ function playerTurn (){
 for( let i=1; i<=9; i++){
     let button=document.getElementById(i);
      button.addEventListener("click",function(){
-            
-        if(button.innerText === "") {
-            if(num % 2 === "") {
-                playerX();
-            } else {
-                player0();
-                // button.innerText = "X";
-            }
-            num = Math.floor(Math.random() * 9) + 1; // Get a new random number for the next turn
-        }
+        currentPlayer = currentPlayer === "X" ? "0" : "X";
+        button.innerText = currentPlayer;
+
     } );
 }
 
