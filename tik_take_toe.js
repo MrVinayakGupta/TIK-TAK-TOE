@@ -59,7 +59,7 @@ function checkWin() {
         victory.innerHTML = "Player 0 is the Winner! 🎉";
         dancer.style.display = "block";
     } else {
-        return 0;
+        return ;
     }
 }
 
@@ -93,4 +93,9 @@ reset.addEventListener("click", function () {
 });
 
 
-
+let checkBox = document.getElementById('checkBox').addEventListener('click', () => {
+    let nav = document.querySelector('.nav ul');
+    nav.style.display = "block";
+    let utilityButton = document.getElementsByClassName('button');
+    utilityButton.style.display = "block";
+});
