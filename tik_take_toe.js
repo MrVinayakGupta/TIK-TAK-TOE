@@ -59,7 +59,7 @@ function checkWin() {
         victory.innerHTML = "Player 0 is the Winner! 🎉";
         dancer.style.display = "block";
     } else {
-        return ;
+        return;
     }
 }
 
@@ -98,4 +98,17 @@ let checkBox = document.getElementById('checkBox').addEventListener('click', () 
     nav.style.display = "block";
     let utilityButton = document.getElementsByClassName('button');
     utilityButton.style.display = "block";
+});
+
+
+//dark mode toggle
+
+const toggle = document.getElementById('darkToggle');
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
+
+const toggleR = document.getElementById('darkToggleR');
+toggleR.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
 });
